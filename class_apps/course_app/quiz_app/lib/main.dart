@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main(){
   runApp(const MyApp());
@@ -43,8 +45,8 @@ class _QuizAppState extends State{
       "correctAnswer":1,
     },
     {
-      "Question":"Who is founder of TATA?",
-      "Option":["Jagdish Mahendra","Vineeta Sing","Sundar Pichai","Ratan Tata"],
+      "Question":"Who is founder of Amazon?",
+      "Option":["Mark Zukarberg","Vineeta Sing","Sundar Pichai","Jeff Bezon"],
       "correctAnswer":3,
     },
     
@@ -130,10 +132,21 @@ class _QuizAppState extends State{
         ),
 
             //QUESTION
-        SizedBox(
+        Container(
           width:380,
-          height:50,
-          child:Text(
+          height:50 ,
+         alignment: Alignment.bottomLeft,
+            decoration:const BoxDecoration(
+              gradient: LinearGradient(
+                begin:Alignment.topCenter,
+                end:Alignment.bottomCenter, 
+                colors: [
+                  Colors.black,
+                ],
+                ),
+            ),
+            
+          child: Text(
             allQuestion[currentQuestionIndex]["Question"],
             style:const TextStyle(
               fontSize:25,
@@ -141,6 +154,8 @@ class _QuizAppState extends State{
               color:Colors.blue,
             ),
           ),
+          
+            
         ),
            
         const SizedBox(
@@ -327,7 +342,7 @@ class _QuizAppState extends State{
                 style:TextStyle(
                   fontSize:40,
                   fontWeight: FontWeight.w500,
-                  color:Colors.orange,
+                  color:Colors.deepOrange,
                 ),
               ),
               const SizedBox(height: 30),
@@ -346,8 +361,10 @@ class _QuizAppState extends State{
                 onPressed: restartQuiz,
                 child: const Text(
                   "Restart Quiz",
+                 
                   style: TextStyle(
                     fontSize: 20,
+                    color:Colors.blue,
                     ),
                 ),
                
