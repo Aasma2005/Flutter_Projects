@@ -15,27 +15,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  /*void openBottomSheet(){
-    showModalBottomSheet(
-      context:context,
-      builder:(context){
-        return  Column(children:[
-           const Text(
-            "BottomSheet Demo",
-          style:TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.w600,
-          ),
-          ),
-          Container(
-            height: 200,
-            color:Colors.lightBlueAccent
-            )  
-          ],
-        );
-      }
-    );    
- }*/
+  
 
   @override
   Widget build(BuildContext context) {
