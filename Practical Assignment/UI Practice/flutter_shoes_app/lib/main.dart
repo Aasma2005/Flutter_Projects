@@ -33,8 +33,12 @@ class MyApp extends StatelessWidget {
         appBar:AppBar(
           title:const Text(
             "Shoes",
+            style:TextStyle(
+              fontSize: 30,
+            )
           ),
-           backgroundColor: Colors.grey,
+          backgroundColor: const Color.fromRGBO(2, 167, 177, 1),
+          // backgroundColor: Colors.grey,
           ),  
            body:Column(
            children: [
@@ -45,14 +49,19 @@ class MyApp extends StatelessWidget {
             const SizedBox(
               height:30,
             ),
-           
-            const Text("Nike Air Forse 1.07",
+           const Row(
+            children: [
+              Text("Nike Air Forse 1.07",
 
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 30,
               fontWeight: FontWeight.w200,
             ),
             ),
+            ]
+            
+           ),
+            
             const SizedBox(
               height:30,
             ),
@@ -63,7 +72,8 @@ class MyApp extends StatelessWidget {
                 
               onPressed: (){},
               style:ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey,
+                //backgroundColor: Colors.grey,
+                 backgroundColor:Color.fromRGBO(2, 167, 177, 1),
               ),
               child:const Text(
                 "SHOES",
@@ -77,7 +87,8 @@ class MyApp extends StatelessWidget {
              ElevatedButton(
               onPressed: (){},
               style:ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey,
+               // backgroundColor: Colors.grey,
+               backgroundColor:Color.fromRGBO(2, 167, 177, 1),
               ),
 
               child:const Text(
@@ -94,7 +105,8 @@ class MyApp extends StatelessWidget {
               "With iconic style and legendary comfort, the AF-1 was made to be worn on repeat. This iteration puts a fresh spin on the hoopsclassic with crisp leather, era- echoing '80s construction and reflective-design Swoosh logos.",
               style: TextStyle(
                 fontSize: 15,
-                color:Colors.black),
+                color:Colors.black
+                ),
              ),
               const SizedBox(
                  height:10,
@@ -102,14 +114,18 @@ class MyApp extends StatelessWidget {
 
                 Row(
                 children:[
-                 const Text("Quality",
+                  const SizedBox(
+                    child:Text("Quality",
                     style:TextStyle(
                       fontSize:25, 
                     ),
                     ),
-                    const SizedBox(
+                    
+                  ),
+                  const SizedBox(
                  width:20,
                ),
+                 
             ElevatedButton(
               onPressed: (){
                  setState(() {
@@ -117,7 +133,8 @@ class MyApp extends StatelessWidget {
                  });
              },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey,
+               
+               backgroundColor:Color.fromRGBO(2, 167, 177, 1),
               ),
               child: const Icon(
                 Icons.add,
@@ -131,14 +148,17 @@ class MyApp extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Colors.grey,
+                  //color: Colors.grey,
+                  color:Color.fromRGBO(2, 167, 177, 1),
                    width: 2.0
                    ),
                 borderRadius: BorderRadius.circular(8.0),
               ),
               child: Text(
                 '$count',
-                style: const TextStyle(fontSize: 24),
+                style: const TextStyle(
+                  fontSize: 24,
+                  ),
               ),
             ),
             const SizedBox(
@@ -153,7 +173,8 @@ class MyApp extends StatelessWidget {
                });
              },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey,
+               
+               backgroundColor:Color.fromRGBO(2, 167, 177, 1),
               ),
               child: const Icon(
                 Icons.remove,
@@ -168,7 +189,6 @@ class MyApp extends StatelessWidget {
         ElevatedButton(
               onPressed:(){},
               
-               // ignore: sort_child_properties_last
                child:const Text("PURCHASE",
                     style:TextStyle(
                       fontSize:20, 
@@ -176,7 +196,8 @@ class MyApp extends StatelessWidget {
                     ),
                     ), 
                     style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.grey,
+               
+                     backgroundColor:Color.fromRGBO(2, 167, 177, 1),
               ),
         )
         ],
